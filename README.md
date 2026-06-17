@@ -4,3 +4,6 @@
 
 
 <img width="523" height="290" alt="Ảnh chụp màn hình 2026-06-17 140947" src="https://github.com/user-attachments/assets/a3116742-606c-4bdb-856f-ba3bad496e12" />
+
+
+<img width="525" height="294" alt="Ảnh chụp màn hình 2026-06-17 141108" src="https://github.com/user-attachments/assets/fc36a269-55ed-4922-b73c-5be578bee9cd" />

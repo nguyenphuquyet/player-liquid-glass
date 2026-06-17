@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo nhúng Liquid Video Player</title>
+<style>
+	* { box-sizing: border-box; }
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+		background: #0c0c0e;
+		color: #eee;
+		min-height: 100vh;
+		margin: 0;
+		padding: 40px 24px;
+	}
+	h1 { font-size: 18px; font-weight: 600; margin: 0 0 8px; }
+	p.note { color: #999; font-size: 13px; margin: 0 0 32px; }
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 32px;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	.card h2 { font-size: 13px; font-weight: 500; color: #aaa; margin: 0 0 10px; }
+</style>
+</head>
+<body>
+
+<div class="grid">
+	<div class="card">
+		<h2>Player #1 — mặc định</h2>
+		<div id="player-1"></div>
+	</div>
+	<div class="card">
+		<h2>Player #2 — tuỳ biến tốc độ &amp; góc bo</h2>
+		<div id="player-2"></div>
+	</div>
+</div>
+
+<script src="liquid-video-player.js"></script>
+<script>
+	// Player mặc định
+	const player1 = new LiquidVideoPlayer('#player-1', {
+		src: 'video.mp4',
+	});
+
+	// Player tuỳ biến: ít mức tốc độ hơn, control bo tròn ít hơn, mute sẵn
+	const player2 = new LiquidVideoPlayer('#player-2', {
+		src: 'video.mp4',
+		muted: true,
+		speeds: [0.5, 1, 1.5, 2],
+		cornerRadius: 12,
+		idleHideMs: 1500,
+	});
+
+	// Ví dụ dùng API: player1.play(), player1.pause(), player1.setSpeed(1.5), player1.destroy()...
+</script>
+
+</body>
+</html>
